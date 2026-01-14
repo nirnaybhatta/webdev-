@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Nirnay Bhatta</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container p">
+            <ul class="flex gap ai jc">
+                <li><a href="nirnay_index.html">Home</a></li>
+                <li><a href="nirnay_about.html">About</a></li>
+                <li><a href="nirnay_feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+    </header>
+    <form class="container form" action="submit.html">
+        <label for="fname">Full Name: </label>
+        <input class="input" type="text" placeholder="John Doe" required id="fname">
+        
+        <label for="email">Email: </label>
+        <input class="input" type="email" name="email" id="email" placeholder="your.email@example.com" required>
+        
+        <fieldset>
+            <legend>Rating</legend>
+            <input type="radio" name="rating" id="vs">
+            <label for="vs">Very Satisfied</label>
+            <input type="radio" name="rating" id="s">
+            <label for="s">Satisfied</label>
+            <input type="radio" name="rating" id="n">
+            <label for="n">Neutral</label>
+            <input type="radio" name="rating" id="us">
+            <label for="us">Unsatisfied</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Interests</legend>
+            <input type="checkbox" name="pm" id="pm">
+            <label for="pm">Project Management</label>
+            <input type="checkbox" name="bd" id="bd">
+            <label for="bd">Business Development</label>
+            <input type="checkbox" name="design" id="design">
+            <label for="design">Creative Design</label>
+        </fieldset>
+
+        <label for="message">Your Message: </label>
+        <textarea class="input" id="message" placeholder="Share your thoughts..." style="height: 100px;"></textarea>
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+</body>
+</html>
