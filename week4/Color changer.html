@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Simple Color Changer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+  <h1>Color Changer</h1>
+  <div class="box" id="box">#3498db</div>
+  <div class="controls">
+    <div class="presets" title="Preset colors">
+      <button class="preset" data-color="#ff0000" style="background:#ff0000" aria-label="Red"></button>
+      <button class="preset" data-color="#00ff00" style="background:#00ff00" aria-label="Green"></button>
+      <button class="preset" data-color="#0000ff" style="background:#0000ff" aria-label="Blue"></button>
+      <button class="preset" data-color="#000000" style="background:#000000" aria-label="Black"></button>
+      <button class="preset" data-color="#808080" style="background:#808080" aria-label="Gray"></button>
+    </div>
+
+    <label for="color">Color</label>
+    <input id="color" type="color" value="#3498db">
+    <button id="reset">Reset</button>
+  </div>
+
+  <script>
+    const box = document.getElementById('box');
+    const picker = document.getElementById('color');
+    const reset = document.getElementById('reset');
+    const presets = document.querySelectorAll('.preset');
+
+    function setColor(c){ box.style.background = c; box.textContent = c }
+
+    // color picker
+    picker.addEventListener('input', ()=> setColor(picker.value));
+
+    // reset button
+    reset.addEventListener('click', ()=> { picker.value = '#3498db'; setColor('#3498db') });
+
+    // preset buttons
+    presets.forEach(btn => {
+      btn.addEventListener('click', ()=> {
+        const c = btn.getAttribute('data-color');
+        picker.value = c;
+        setColor(c);
+      });
+    });
+  </script>
+</body>
+</html>
