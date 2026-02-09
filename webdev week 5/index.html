@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JavaScript Demo</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Async JavaScript Demo</h1>
+        <p>Click buttons to see different async patterns in action!</p>
+        
+        <div>
+            <button onclick="runCallback()">1. Callback Demo</button>
+            <button onclick="runCallbackHell()">2. Callback Hell</button>
+            <button onclick="runPromises()">3. Promises</button>
+            <button onclick="runAsyncAwait()">4. Async/Await</button>
+            <button onclick="clearOutput()" style="background: #f44336;">Clear</button>
+        </div>
+
+        <div class="output" id="output">
+            <div class="loading">Click a button to start...</div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
