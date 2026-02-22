@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+    <button onclick="login()" id="btn">Login</button>
+    <p id="text"></p>
+
+    <script>
+        function login() {
+
+            //get button
+            var button = document.getElementById("btn");
+            var text = document.getElementById("text");
+
+            //disable
+            button.disabled = true;
+
+            //message
+            text.innerHTML = "Logging in...";
+
+            //timeout
+            var promise = new Promise(function(resolve) {
+
+                setTimeout(function() {
+                    resolve();
+                }, 2000);
+
+            });
+
+            //welcome back
+            promise.then(function(){
+                text.innerHTML = "Welcome back!";
+            });
+
+        }
+    </script>
+    </body>
+</html>
